@@ -49,16 +49,16 @@ function placeOrder(customerName,itemsOrdered) {
             {name:"Spanish Latte", quantity: 2},
             {name:"Matcha", quantity: 1},
             {name:"Espresso", quantity: 2},
-    ], "Pending");
+    ], status = "Pending")
     
     placeOrder("Sarah Lee", [
                 {name:"Latte", quantity: 1},
                 {name:"Matcha", quantity: 1},
-            ], "Pending");
+            ], status = "Pending")
 
     placeOrder("Bob Millers", [
         {name:"Latte", quantity: 4},
         {name:"Espresso", quantity: 1},
-    ], "Pending");
+    ], status = "Pending")
       
     console.log("Orders:", orders);
