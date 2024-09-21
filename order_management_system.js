@@ -9,3 +9,8 @@ const inventory = [
 ];
 
 console.log ("Inventory:",(inventory)); //Logging the array 
+
+//Task 2: Creating an Orders Array of Order Objects
+
+// Empty Array to store customer orders
+let orders = [];
