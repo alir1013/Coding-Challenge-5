@@ -58,7 +58,23 @@ function placeOrder(customerName,itemsOrdered) {
 
     placeOrder("Bob Millers", [
         {name:"Latte", quantity: 4},
-        {name:"Espresso", quantity: 1},
+        {name:"Espresso", quantity: 3},
     ], status = "Pending")
       
     console.log("Orders:", orders);
+
+   
+//Task 4: Creating a Function to Calculate Total for an Order
+
+//Creating a function that accepts an order object and calculates the total
+function calculateOrderTotal(orders) {
+  return orders.reduce((total,orders) => {
+    const product = inventory.find(product => product.name === product.name);
+    if(product){
+        return total + (product.price * product.quantity);
+    }
+    return total;
+});
+}
+const priceOfOrder = calculateOrderTotal(orders);
+console.log("Total Price of Order:",priceOfOrder);
