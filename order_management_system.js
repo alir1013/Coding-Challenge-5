@@ -68,13 +68,14 @@ function placeOrder(customerName,itemsOrdered) {
 
 //Creating a function that accepts an order object and calculates the total
 function calculateOrderTotal(orders) {
-  return orders.reduce((total,orders) => {
+  return orders.reduce((total,orders) => {  //reduce() method to iterate through the order's items
     const product = inventory.find(product => product.name === product.name);
     if(product){
-        return total + (product.price * product.quantity);
+        return total + (product.price * product.quantity); //Taking the price from the inventory and multiplying it by the quantity ordered
     }
     return total;
 });
 }
 const priceOfOrder = calculateOrderTotal(orders);
 console.log("Total Price of Order:",priceOfOrder);
+
