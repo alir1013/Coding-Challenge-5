@@ -94,3 +94,12 @@ function completeOrder(customerName) {
 //Testing the function
 let completeOrderTest= completeOrder("Sarah Lee")
 console.log(`Sarah Lee's order status:${completeOrderTest}`);
+
+//Task 6: Creating a Function to Check Pending Orders
+
+//creating a function that iterates over the orders array and logs details of orders that are still pending
+function checkPendingOrders(orders) {
+    return orders.filter(order => order.OrderStatus === "Pending");
+}
+const pendingOrders= checkPendingOrders(orders);
+console.log("Order Details of Pending Orders:",pendingOrders); //Testing the Function
